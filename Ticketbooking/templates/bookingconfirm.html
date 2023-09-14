@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Booking Confirmation Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+      background-color: #f0f0f0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    p {
+      margin-bottom: 10px;
+    }
+    form {
+      margin-top: 20px;
+    }
+    button {
+      font-size: 16px;
+      padding: 10px;
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+    button:hover {
+      background-color: #3e8e41;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="container" style="text-align: center;">
+    <h1>Please confirm or cancel your booking:</h1>
+    <p> Venue Name: {{ vname }}</p>
+    <p>Show Name: {{ sname }}</p>
+    <P>Rating: {{ avg }}</P>
+    <p>Price per ticket: {{ price }}</p>
+    <p>Number of Tickets: {{ quantity }}</p>
+    <p> Total price: {{ total }}</p>
+    <form action="" method="post">
+      <button type="submit" onclick="window.print()" name="confirm">Confirm</button>
+      <button type="submit" name="cancel">Cancel</button>
+    </form>
+  </div>
+</body>
+</html>
